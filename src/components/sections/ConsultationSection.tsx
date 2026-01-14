@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, MapPin, ArrowRight } from "lucide-react";
 
+const WHATSAPP_LINK = "https://wa.me/22901955850961?text=Bonjour%20Hounnongan%20Yaho%20Justin,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20consultation.";
+
 const ConsultationSection = () => {
   const options = [
     {
@@ -55,11 +57,13 @@ const ConsultationSection = () => {
 
           {/* CTA */}
           <div className="space-y-4">
-            <Button variant="hero" size="xl" className="group">
-              <Phone className="w-5 h-5 mr-2" />
-              Demander une consultation
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="xl" className="group">
+                <Phone className="w-5 h-5 mr-2" />
+                Demander une consultation
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
             <p className="text-sm text-muted-foreground font-body">
               Disponible du lundi au samedi • Réponse sous 24h
             </p>

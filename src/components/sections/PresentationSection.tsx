@@ -1,4 +1,5 @@
 import { Shield, Heart, Eye } from "lucide-react";
+import portraitImage from "@/assets/portrait-presentation.jpg";
 
 const PresentationSection = () => {
   const values = [
@@ -23,8 +24,24 @@ const PresentationSection = () => {
     <section id="presentation" className="section-spacing bg-secondary/30">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Portrait image */}
+          <div className="order-2 lg:order-1">
+            <div className="relative">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden shadow-elevated">
+                <img 
+                  src={portraitImage} 
+                  alt="Hounnongan SOGNANNOU Yaho Justin" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              {/* Decorative element */}
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/5 rounded-full -z-10" />
+            </div>
+          </div>
+          
           {/* Text content */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-1 lg:order-2">
             <div className="space-y-4">
               <p className="text-sm tracking-[0.15em] uppercase text-primary font-medium">
                 Présentation
@@ -43,29 +60,28 @@ const PresentationSection = () => {
                 Ma pratique repose sur le respect absolu des traditions vodoun, une écoute sincère de chaque situation, et une approche personnalisée. Je ne fais aucune promesse irréaliste — mon rôle est d'accompagner, d'éclairer et de proposer des solutions adaptées à chaque personne.
               </p>
             </div>
-          </div>
-          
-          {/* Values cards */}
-          <div className="space-y-4">
-            {values.map((value, index) => (
-              <div
-                key={index}
-                className="card-elevated p-6 flex items-start gap-4 transition-all duration-300 hover:shadow-elevated"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <value.icon className="w-6 h-6 text-primary" />
+
+            {/* Values */}
+            <div className="space-y-3 pt-4">
+              {values.map((value, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-3"
+                >
+                  <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <value.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-display font-semibold text-foreground text-sm">
+                      {value.title}
+                    </h3>
+                    <p className="text-xs text-muted-foreground font-body">
+                      {value.description}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-display font-semibold text-foreground mb-1">
-                    {value.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground font-body">
-                    {value.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
