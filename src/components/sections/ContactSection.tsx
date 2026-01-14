@@ -57,16 +57,16 @@ const ContactSection = () => {
           {/* Contact info */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
             <a
-              href="tel:+22901955850961"
+              href="tel:+22995585061"
               className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"
             >
               <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                 <Phone className="w-5 h-5 text-primary" />
               </div>
-              <span className="font-body font-medium">+229 01 95 58 50 61</span>
+              <span className="font-body font-medium">+229 95 58 50 61</span>
             </a>
             <a
-              href="https://wa.me/22901955850961?text=Bonjour%20Hounnongan%20Yaho%20Justin,%20je%20souhaite%20vous%20contacter."
+              href="https://wa.me/22995585061?text=Bonjour%20Hounnongan%20Yaho%20Justin,%20je%20souhaite%20vous%20contacter."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"

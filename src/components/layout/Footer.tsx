@@ -20,15 +20,15 @@ const Footer = () => {
           {/* Contact */}
           <div className="text-center space-y-2">
             <a
-              href="tel:+22901955850961"
+              href="tel:+22995585061"
               className="inline-flex items-center gap-2 text-background hover:text-primary-foreground transition-colors"
             >
               <Phone className="w-4 h-4" />
-              <span className="font-body">+229 01 95 58 50 61</span>
+              <span className="font-body">+229 95 58 50 61</span>
             </a>
             <div>
               <a
-                href="https://wa.me/22901955850961"
+                href="https://wa.me/22995585061"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-background/80 hover:text-primary-foreground transition-colors text-sm"
