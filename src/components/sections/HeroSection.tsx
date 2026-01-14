@@ -1,11 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
+  const whatsappNumber = "22901955850961";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Bonjour%20Hounnongan%20Yaho%20Justin,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20consultation.`;
+
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-secondary/30" />
+      {/* Background image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBackground} 
+          alt="Hounnongan SOGNANNOU Yaho Justin" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-background/70" />
+      </div>
       
       {/* Decorative element */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -31,10 +42,12 @@ const HeroSection = () => {
           
           {/* CTA */}
           <div className="pt-4">
-            <Button variant="hero" size="xl" className="group">
-              Consultation
-              <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="xl" className="group">
+                Consultation
+                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
