@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const HeroSection = () => {
-  const whatsappNumber = "22901955850961";
+  const whatsappNumber = "22995585061";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Bonjour%20Hounnongan%20Yaho%20Justin,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20consultation.`;
 
   return (
