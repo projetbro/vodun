@@ -44,13 +44,13 @@ const Header = () => {
           {/* Logo */}
           <a
             href="#"
-            className="font-display font-semibold text-lg text-foreground"
+            className="font-display font-semibold text-lg text-primary"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <span className="text-primary">Maître Spirituel</span> SODRÉGBÉ
+            Maître Spirituel SODRÉGBÉ
           </a>
 
           {/* Desktop navigation */}
