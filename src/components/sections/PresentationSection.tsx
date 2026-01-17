@@ -1,5 +1,5 @@
 import { Shield, Heart, Eye } from "lucide-react";
-import portraitImage from "@/assets/portrait-presentation.jpg";
+import portraitImage from "@/assets/presentation-portrait.jpg";
 
 const PresentationSection = () => {
   const values = [

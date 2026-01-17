@@ -1,4 +1,5 @@
 import { Compass, Users, Flame } from "lucide-react";
+import consultationBg from "@/assets/consultation-bg.jpg";
 
 const ServicesSection = () => {
   const services = [
@@ -6,16 +7,19 @@ const ServicesSection = () => {
       icon: Compass,
       title: "Consultation spirituelle",
       description: "Une consultation approfondie pour comprendre votre situation et identifier les causes de vos difficultés. Cette étape est essentielle avant tout accompagnement.",
+      hasBackground: true,
     },
     {
       icon: Users,
       title: "Accompagnement des difficultés",
       description: "Un suivi personnalisé pour vous aider à traverser les périodes difficiles : problèmes familiaux, blocages, situations inexpliquées. Chaque cas est unique.",
+      hasBackground: false,
     },
     {
       icon: Flame,
       title: "Rituels traditionnels",
       description: "Lorsque la situation le nécessite, je peux procéder à des rituels traditionnels adaptés. Ces pratiques sont réalisées dans le strict respect des traditions ancestrales.",
+      hasBackground: false,
     },
   ];
 
@@ -38,20 +42,30 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="card-elevated p-8 text-center transition-all duration-300 hover:shadow-elevated group"
+              className="card-elevated p-8 text-center transition-all duration-300 hover:shadow-elevated group relative overflow-hidden"
             >
-              {/* Icon */}
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6 transition-colors duration-300 group-hover:bg-primary/20">
-                <service.icon className="w-7 h-7 text-primary" />
+              {/* Background image for Consultation card */}
+              {service.hasBackground && (
+                <div 
+                  className="absolute inset-0 bg-cover bg-center blur-sm opacity-10"
+                  style={{ backgroundImage: `url(${consultationBg})` }}
+                />
+              )}
+              
+              <div className="relative z-10">
+                {/* Icon */}
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6 transition-colors duration-300 group-hover:bg-primary/20">
+                  <service.icon className="w-7 h-7 text-primary" />
+                </div>
+                
+                <h3 className="font-display font-semibold text-xl text-foreground mb-3">
+                  {service.title}
+                </h3>
+                
+                <p className="text-muted-foreground font-body leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              
-              <h3 className="font-display font-semibold text-xl text-foreground mb-3">
-                {service.title}
-              </h3>
-              
-              <p className="text-muted-foreground font-body leading-relaxed">
-                {service.description}
-              </p>
             </div>
           ))}
         </div>
