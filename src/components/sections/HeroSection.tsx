@@ -21,10 +21,6 @@ const HeroSection = () => {
       {/* Content */}
       <div className="section-container relative z-10 text-center">
         <div className="max-w-3xl mx-auto space-y-8 animate-fade-in-up">
-          {/* Subtitle */}
-          <p className="text-sm tracking-[0.2em] uppercase text-muted-foreground font-body font-medium">
-            Maître Spirituel SODRÉGBÉ
-          </p>
           
           {/* Main heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-semibold leading-tight text-foreground">
