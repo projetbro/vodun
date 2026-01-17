@@ -3,27 +3,39 @@ import { Star, Quote } from "lucide-react";
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Kouadio A.",
-      location: "Abidjan, Côte d'Ivoire",
-      text: "J'étais sceptique au début, mais l'accompagnement de Hounnongan Yaho Justin a été d'une grande aide. Son approche respectueuse et son écoute m'ont permis de retrouver la paix. Je recommande vivement.",
-      rating: 5,
-    },
-    {
-      name: "Fatou M.",
+      name: "Aminata D.",
       location: "Cotonou, Bénin",
-      text: "Après des mois de difficultés, j'ai contacté Hounnongan Yaho Justin. Sa discrétion et son professionnalisme m'ont rassurée. Les solutions proposées étaient adaptées à ma situation personnelle.",
+      text: "Après avoir obtenu mon diplôme, je n'arrivais pas à trouver un emploi malgré tous mes efforts. Ma situation ne bougeait pas. Grâce à l'accompagnement du Maître Spirituel SODRÉGBÉ, une solution a été trouvée et j'ai commencé à avancer progressivement dans ma vie professionnelle.",
       rating: 5,
     },
     {
-      name: "Ibrahim D.",
+      name: "Adjoua M.",
+      location: "Abidjan, Côte d'Ivoire",
+      text: "Dans mon couple, je faisais face à des difficultés pour avoir un enfant. Cette situation créait des tensions dans mon foyer. Après être venue consulter le Maître Spirituel SODRÉGBÉ, j'ai trouvé satisfaction. Aujourd'hui, j'arrive à enfanter sans problème.",
+      rating: 5,
+    },
+    {
+      name: "Kodjo T.",
       location: "Lomé, Togo",
-      text: "Un homme de confiance qui respecte vraiment les traditions. Pas de promesses exagérées, juste un accompagnement sincère et efficace. Ma famille et moi lui sommes reconnaissants.",
+      text: "J'avais perdu ma virilité après une mauvaise rencontre. Je n'arrivais plus à avoir d'érection. Après être venu me faire consulter auprès du Maître Spirituel SODRÉGBÉ, une solution m'a été apportée. Aujourd'hui, ma situation va bien.",
       rating: 5,
     },
     {
-      name: "Aïcha K.",
+      name: "Fatimata O.",
       location: "Ouagadougou, Burkina Faso",
-      text: "La consultation à distance s'est très bien passée. Hounnongan Yaho Justin a pris le temps de m'écouter et de comprendre ma situation avant de me proposer un accompagnement personnalisé.",
+      text: "J'étais une grande commerçante et j'ai perdu subitement ma clientèle, d'un seul coup. Après plusieurs recherches sans solution, j'ai finalement eu recours aux services du Maître Spirituel SODRÉGBÉ. Grâce à son accompagnement, j'ai recommencé à vendre comme jamais.",
+      rating: 5,
+    },
+    {
+      name: "Mamadou S.",
+      location: "Dakar, Sénégal",
+      text: "À cause de certains blocages spirituels et des mauvais regards, mes deux enfants n'arrivaient pas à avancer dans leurs études et redoublaient régulièrement. Avec l'intervention du Maître Spirituel SODRÉGBÉ, ils ont pu décrocher des bourses d'études en Amérique.",
+      rating: 5,
+    },
+    {
+      name: "Ibrahima K.",
+      location: "Paris, France",
+      text: "Après la mort de mon père, je faisais face à un conflit domanial. Après consultation et accompagnement, la justice a finalement tranché en ma faveur. Tout cela grâce à l'accompagnement du Maître Spirituel SODRÉGBÉ.",
       rating: 5,
     },
   ];

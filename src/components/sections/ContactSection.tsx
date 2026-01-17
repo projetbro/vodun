@@ -66,7 +66,7 @@ const ContactSection = () => {
               <span className="font-body font-medium">+229 95 58 50 61</span>
             </a>
             <a
-              href="https://wa.me/22995585061?text=Bonjour%20Hounnongan%20Yaho%20Justin,%20je%20souhaite%20vous%20contacter."
+              href="https://wa.me/22995585061?text=Bonjour%20Maître%20Spirituel%20SODRÉGBÉ,%20je%20souhaite%20vous%20contacter."
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 text-foreground hover:text-primary transition-colors"

@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo & Name */}
           <div>
             <p className="font-display font-semibold text-lg mb-2">
-              Hounnongan SOGNANNOU Yaho Justin
+              Maître Spirituel SODRÉGBÉ
             </p>
             <p className="text-sm text-background/70 font-body">
               Accompagnement spirituel traditionnel

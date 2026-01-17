@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, MapPin, ArrowRight } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/22995585061?text=Bonjour%20Hounnongan%20Yaho%20Justin,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20consultation.";
+const WHATSAPP_LINK = "https://wa.me/22995585061?text=Bonjour%20Maître%20Spirituel%20SODRÉGBÉ,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20consultation.";
 
 const ConsultationSection = () => {
   const options = [
