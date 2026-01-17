@@ -37,7 +37,7 @@ const AdminTexts = () => {
           key: "subtitle", 
           label: "Sous-titre", 
           type: "text", 
-          value: "Hounnongan Yaho Justin" 
+          value: "Maître Spirituel SODRÉGBÉ" 
         },
         { 
           key: "description", 

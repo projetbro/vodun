@@ -25,7 +25,7 @@ const TrustSection = () => {
               {/* Center content */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <p className="text-6xl font-display font-bold text-gradient mb-2">15+</p>
+                  <p className="text-6xl font-display font-bold text-gradient mb-2">20+</p>
                   <p className="text-sm text-muted-foreground uppercase tracking-wider font-body">
                     Années d'expérience
                   </p>

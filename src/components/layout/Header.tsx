@@ -50,7 +50,7 @@ const Header = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
-            <span className="text-primary">Hounnongan</span> Yaho Justin
+            <span className="text-primary">Maître Spirituel</span> SODRÉGBÉ
           </a>
 
           {/* Desktop navigation */}
