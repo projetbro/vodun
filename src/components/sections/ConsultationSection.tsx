@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MessageCircle, MapPin, ArrowRight } from "lucide-react";
 
-const WHATSAPP_LINK = "https://wa.me/22995585061?text=Bonjour%20Maître%20Spirituel%20SODRÉGBÉ,%20je%20souhaite%20prendre%20rendez-vous%20pour%20une%20consultation.";
+const WHATSAPP_NUMBER = "22901955850 61";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER.replace(/\s/g, "")}?text=${encodeURIComponent("Bonjour Maître Spirituel SODRÉGBÉ, je souhaite prendre rendez-vous pour une consultation.")}`;
 
 const ConsultationSection = () => {
   const options = [
