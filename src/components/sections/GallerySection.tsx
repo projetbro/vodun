@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
@@ -8,7 +8,7 @@ import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 
 const GallerySection = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const images = [
     { src: gallery1, alt: "Autel traditionnel vodoun" },
@@ -17,6 +17,18 @@ const GallerySection = () => {
     { src: gallery4, alt: "Pratiques traditionnelles" },
     { src: gallery5, alt: "Cérémonie au bord de la mer" },
   ];
+
+  const handlePrev = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === 0 ? images.length - 1 : selectedIndex - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (selectedIndex !== null) {
+      setSelectedIndex(selectedIndex === images.length - 1 ? 0 : selectedIndex + 1);
+    }
+  };
 
   return (
     <section id="galerie" className="section-spacing bg-secondary/30">
@@ -32,18 +44,18 @@ const GallerySection = () => {
           <div className="divider-subtle" />
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        {/* Gallery Grid - 1 colonne mobile, 2 colonnes tablette/PC */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {images.map((image, index) => (
             <div
               key={index}
-              className="aspect-square rounded-xl overflow-hidden cursor-pointer group relative shadow-soft hover:shadow-elevated transition-all duration-300"
-              onClick={() => setSelectedImage(image.src)}
+              className="aspect-[4/3] rounded-xl overflow-hidden cursor-pointer group relative shadow-soft hover:shadow-elevated transition-all duration-300"
+              onClick={() => setSelectedIndex(index)}
             >
               <img
                 src={image.src}
                 alt={image.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
             </div>
@@ -57,18 +69,33 @@ const GallerySection = () => {
       </div>
 
       {/* Lightbox Dialog */}
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+      <Dialog open={selectedIndex !== null} onOpenChange={() => setSelectedIndex(null)}>
         <DialogContent className="max-w-4xl p-0 bg-transparent border-none">
           <button
-            onClick={() => setSelectedImage(null)}
+            onClick={() => setSelectedIndex(null)}
             className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
           >
             <X className="w-6 h-6" />
           </button>
-          {selectedImage && (
+          
+          {/* Navigation */}
+          <button
+            onClick={handlePrev}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {selectedIndex !== null && (
             <img
-              src={selectedImage}
-              alt="Image agrandie"
+              src={images[selectedIndex].src}
+              alt={images[selectedIndex].alt}
               className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
             />
           )}
